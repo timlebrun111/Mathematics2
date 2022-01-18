@@ -7,7 +7,7 @@ namespace Mathmatics2
     public class BasicMath
     {
         /// <summary>
-        /// This is a function that adds two numbers together
+        /// This is a function that adds 
         /// </summary>
         /// <param name="num1"></param>
         /// <param name="num2"></param>

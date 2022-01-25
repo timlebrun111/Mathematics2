@@ -20,6 +20,7 @@ namespace MathematicsConsole
             //Console.ReadLine();
             AreArgumentsValid(args);
             var math = new BasicMath();
+            var newMath = new AdvMath();
             switch(_operand)
             {
                 case "add":
@@ -34,6 +35,18 @@ namespace MathematicsConsole
                 case "div":
                     Console.WriteLine($"{_num1} / {_num2} = {math.DivideNumbers(_num1, _num2)}");
                     break;
+                case "area":
+                    Console.WriteLine($"{_num1} * {_num2} = {newMath.calcArea(_num1, _num2)}");
+                    break;
+                case "avg":
+                    Console.WriteLine($"The average of {_num1} and {_num2} is {newMath.avgOfList(_num1, _num2)}");
+                    break;
+                case "squared":
+                    Console.WriteLine($"The squared value of {_num1} is {newMath.calcSqr(_num1)}");
+                    break;
+                case "pathag":
+                    Console.WriteLine($"{_num1}^2 + {_num2}^2 = {newMath.CalcPathag(_num1, _num2)}");
+                    break;
                 default:
                     Console.WriteLine("The Operand you chose is not a valid option. Please Enter Add, Sub, Mul, Div");
                     break;
@@ -43,11 +56,24 @@ namespace MathematicsConsole
 
         private static void AreArgumentsValid(string[] args)
         {
-            _operand = args[1].ToLower();
-            _num1 = Numparser(args[2]);
-            _num2 = Numparser(args[3]);
-            Console.WriteLine("All Arguments Are Valid!");
-            //Console.ReadLine();
+            if (args.Length == 3)
+            {
+                _operand = args[1].ToLower();
+                _num1 = Numparser(args[2]);
+                Console.WriteLine("All Arguments Are Valid!");
+                //Console.ReadLine();
+            }
+            else
+            {
+                _operand = args[1].ToLower();
+                _num1 = Numparser(args[2]);
+                _num2 = Numparser(args[3]);
+                Console.WriteLine("All Arguments Are Valid!");
+                //Console.ReadLine();
+            }
+
+
+
 
         }
 

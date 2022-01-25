@@ -12,14 +12,13 @@ namespace Mathmatics2
             return Height*Width;
         }
 
-        public double avgOfList(double num1, double num2, double num3, double num4)
+        public double avgOfList(double num1, double num2)
         {
             List<double> doubleList = new List<double>();
 
             doubleList.Add(num1);
             doubleList.Add(num2);
-            doubleList.Add(num3);
-            doubleList.Add(num4);
+            
 
             double avg = Queryable.Average(doubleList.AsQueryable());
 
